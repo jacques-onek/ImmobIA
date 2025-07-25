@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const pathname = usePathname()
   return (
-    <header className=' flex items-center justify-between rounded-b-md py-10 w-full px-10  h-5 shadow-card  bg-white'>
+    <header className=' fixed z-50 flex items-center justify-between rounded-b-md py-10 w-full px-10  h-5 shadow-card  bg-white'>
       <section className='flex py-2 gap-8 rounded-full px-8 text-center h-fit bg-slate-50   border-transparent inset-1 border-0'>
         {navLinks.map(({title,href}) => (
            <Link key={href} href={href} className={cn("text-sm font-mono text-gray-700",pathname === href && "bg-white rounded-full shadow-sm text-center py-[3px] px-4 ")}>
