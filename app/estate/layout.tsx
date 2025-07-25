@@ -18,8 +18,10 @@ export default function RootLayout({
           <section className=" bg-red-600 w-[17vw] h-fit">
             <SideBar/>
           </section>
-          <section className="flex flex-col  w-[99vw]">
-            <Navbar/>
+          <section className="flex flex-col gap-32  w-[99vw]">
+            <div>
+              <Navbar/>
+            </div>
             {children}
           </section>
         </main>
