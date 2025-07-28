@@ -1,10 +1,11 @@
 import { Property } from '@/constant/seedData'
-import {LuBath, LuBed, LuBookmark, LuSave } from "react-icons/lu";
+import {LuBath, LuBed, LuBookmark,} from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
 import Image from 'next/image'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link';
+import { Skeleton } from './ui/skeleton';
 
 const Card = ({
   id,
@@ -17,14 +18,17 @@ const Card = ({
   image
 }:Property) => {
   return (
-      <article className='flex shadow w-3xs flex-col gap-1 px-2 py-2 bg-white rounded-lg'>
+      <article className='flex  shadow lg:w-3xs flex-col gap-1 px-2 py-2 bg-white rounded-lg'>
           <Link href={`/details/${id}`} className='cursor-pointer'>
                 <div className='relative'>
                   <div className='flex gap-1 p-2 shadow bg-white text-xs font-mono rounded-full absolute top-2 right-2'>
                     <GoStarFill className='text-yellow-500'/>
                     <p>{rating}</p>
                   </div>
-                  <Image src={image} alt={name} width={250} height={250} loading='lazy' className=' rounded-lg' />
+        
+                  <Suspense fallback={<Skeleton/>} unstable_expectedLoadTime={2000}>
+                    <Image src={image} alt={name}  width={250} height={250} loading='eager' className='w-full rounded-lg' />
+                  </Suspense>
                   <div className='flex gap-1 p-1 shadow bg-white text-[9px]  font-mono rounded-full absolute bottom-2 left-2'>
                     <GrLocation className='size-3' />
                     <p>{address.substring(4,15)}</p>
