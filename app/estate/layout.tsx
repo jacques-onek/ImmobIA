@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
   return (
         <main className="flex w-full justify-between gap-6 bg-sky-50 min-h-screen">
-          <section className=" bg-red-600 w-[17vw] h-fit">
+          <section className=" bg-red-600 w-[17vw] h-fit max-md:hidden">
             <SideBar/>
           </section>
-          <section className="flex flex-col gap-32  w-[99vw]">
+          <section className="flex flex-col gap-32 w-full  lg:w-[99vw]">
             <div>
               <Navbar/>
             </div>
