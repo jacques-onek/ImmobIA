@@ -10,7 +10,7 @@
 export const navLinks = [
     {
      title:"Home",
-     href:"/"
+     href:"/estate"
     },
     {
         title:"Buy",
