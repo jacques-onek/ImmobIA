@@ -3,10 +3,11 @@ import { Property } from '@/constant/seedData'
 import {LuBath, LuBed, LuBookmark,} from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
-import Image from 'next/image'
+import Image  from 'next/image'
 import React, { Suspense } from 'react'
 import Link from 'next/link';
 import { Skeleton } from './ui/skeleton';
+import IconBtn from './IconBtn';
 
 
 const Card = ({
@@ -20,7 +21,7 @@ const Card = ({
   image
 }:Property) => {
   return (
-      <article className='flex  shadow lg:w-3xs flex-col gap-1 px-2 py-2 bg-white rounded-lg'>
+      <article className='flex flex-1 shadow lg:w-3xs flex-col gap-1 px-2 py-2 bg-white rounded-lg'>
           <Link href={`/details/${id}`} className='cursor-pointer'>
                 <div className='relative'>
                   <div className='flex gap-1 p-2 shadow bg-white text-xs font-mono rounded-full absolute top-2 right-2'>
@@ -48,10 +49,7 @@ const Card = ({
                   <LuBed />
                   <p>{bedrooms}bedrooms</p>
                 </div>
-                <div className='flex place-content-center gap-2 text-center'>
-                  <LuBath />
-                  <p>{bathrooms}bathrooms</p>
-                </div>
+                <IconBtn title={bathrooms} icon={LuBath} />
                 <button>
                   <LuBookmark/>
                 </button>
