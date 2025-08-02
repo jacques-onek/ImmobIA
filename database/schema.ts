@@ -1,4 +1,5 @@
-import { integer, pgEnum, pgTable, text, timestamp, uuid, varchar } from "drizzle-orm/pg-core";
+import { sql } from "drizzle-orm";
+import { boolean, integer, numeric, pgEnum, pgTable, text, timestamp, uuid, varchar } from "drizzle-orm/pg-core";
 
 
 
@@ -18,17 +19,24 @@ export const users = pgTable("users", {
   created:timestamp("created_at").defaultNow()
 });
 
-export const estates = pgTable('estates',{
-    id:uuid("id").defaultRandom().primaryKey().notNull().unique(),  
-    PropertyName: varchar("Property_name",{length:500}),
-    Price:integer("Property_price").notNull(), 
-    Bedrooms:integer("Property_bedrooms"),
-    Bathrooms:integer("Property_bathrooms"),
-    Address:text("Property_address").notNull(),
-    Rating:integer("Property_rating"), 
-    Type: PROPERTY_TYPE_ENUM("type"),
-    Features:text("Property_feature"), 
-    Area:integer("Property_area"), 
-    Image:text("Property_image") 
+export const properties = pgTable("properties", {
+  id: uuid("id").primaryKey().defaultRandom().unique(),
+  name: varchar("name", { length: 255 }).notNull(),
+  price: numeric("price", { precision: 10, scale: 2 }).notNull(),
+  bedrooms: integer("bedrooms").notNull(),
+  bathrooms: integer("bathrooms").notNull(),
+  address: text("address").notNull(),
 
-})
+  // Ajout pour la géolocalisation
+  latitude: numeric("latitude", { precision: 9, scale: 6 }).notNull(),   // Ex: -1.957875
+  longitude: numeric("longitude", { precision: 9, scale: 6 }).notNull(), // Ex: 30.091722
+
+  rating: numeric("rating", { precision: 2, scale: 1 }).notNull(),
+  type: varchar("type", { length: 50 }).notNull(),
+  features: text("features").array().notNull(),
+  area: integer("area").notNull(),
+  image: text("image").notNull(),
+  listedAt: timestamp("listed_at", { mode: "string" }).default(sql`now()`),
+  available: boolean("available").default(true).notNull(),
+});
+
