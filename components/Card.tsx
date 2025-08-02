@@ -1,3 +1,4 @@
+"use client"
 import { Property } from '@/constant/seedData'
 import {LuBath, LuBed, LuBookmark,} from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
@@ -6,6 +7,7 @@ import Image from 'next/image'
 import React, { Suspense } from 'react'
 import Link from 'next/link';
 import { Skeleton } from './ui/skeleton';
+
 
 const Card = ({
   id,
