@@ -14,7 +14,7 @@ const manrope = Manrope({
 })
 export const metadata: Metadata = {
   title: "ImmobIA",
-  description: "A real state plateform for finding , selling, renting ",
+  description: "A real estate plateform for finding , selling, renting ",
 };
 
 export default function RootLayout({

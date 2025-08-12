@@ -18,10 +18,6 @@ import apart16 from "@/public/asset/apart115.jpg"
 import apart17 from "@/public/asset/apart116.jpg"
 
 
-
-
-
-
 export type PropertyType = "Appartement" | "Maison" | "Studio" | "Immeuble" | "Villa" | "Loft" | "Duplex" | "Penthouse";
 
 export interface Property {
