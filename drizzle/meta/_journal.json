@@ -43,6 +43,13 @@
       "when": 1752930535198,
       "tag": "0005_talented_squirrel_girl",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1754523334993,
+      "tag": "0006_tricky_inhumans",
+      "breakpoints": true
     }
   ]
 }
