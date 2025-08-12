@@ -28,10 +28,7 @@ const Card = ({
                     <GoStarFill className='text-yellow-500'/>
                     <p>{rating}</p>
                   </div>
-        
-                  <Suspense fallback={<Skeleton/>} unstable_expectedLoadTime={2000}>
                     <Image src={image} alt={name}  width={250} height={250} loading='eager' className='w-full rounded-lg' />
-                  </Suspense>
                   <div className='flex gap-1 p-1 shadow bg-white text-[9px]  font-mono rounded-full absolute bottom-2 left-2'>
                     <GrLocation className='size-3' />
                     <p>{address.substring(4,15)}</p>
@@ -45,10 +42,7 @@ const Card = ({
                 <p>${price}</p>
               </div>
               <div className='flex text-xs gap-x-2'>
-                <div className='flex place-content-center gap-2 text-center'>
-                  <LuBed />
-                  <p>{bedrooms}bedrooms</p>
-                </div>
+                <IconBtn title={bathrooms} icon={LuBed} />
                 <IconBtn title={bathrooms} icon={LuBath} />
                 <button>
                   <LuBookmark/>
