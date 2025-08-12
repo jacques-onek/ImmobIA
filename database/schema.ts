@@ -35,7 +35,7 @@ export const properties = pgTable("properties", {
   type: varchar("type", { length: 50 }).notNull(),
   features: text("features").array().notNull(),
   area: integer("area").notNull(),
-  image: text("image").notNull(),
+  images: text("images").array().notNull(),
   listedAt: timestamp("listed_at", { mode: "string" }).default(sql`now()`),
   available: boolean("available").default(true).notNull(),
 });

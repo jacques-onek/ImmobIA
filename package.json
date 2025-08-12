@@ -6,13 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "db:generate":"npx drizzle-kit generate",
-    "db:migrate":"npx drizzle-kit migrate",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "npx drizzle-kit migrate",
     "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "@neondatabase/serverless": "^1.0.1",
+    "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "bcryptjs": "^3.0.2",

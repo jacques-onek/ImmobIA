@@ -1,0 +1,1 @@
+ALTER TABLE "properties" ALTER COLUMN "image" SET DATA TYPE text[];
