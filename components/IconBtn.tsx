@@ -1,26 +1,15 @@
-import { IconType } from "react-icons/lib"
-
-
-
-
-
-
-
-
 
 
 interface IconBtnProps {
     title:number
-    icon:IconType
+    icon:React.ElementType
 }
 
 
-const IconBtn = ({title,icon}:IconBtnProps) => {
+const IconBtn = ({title,icon:Icon}:IconBtnProps) => {
   return (
     <div className='flex place-content-center gap-2 text-center'>
-        <>
-         {icon}
-        </>
+        <Icon className="size-3"/>
         <p>{title}bathrooms</p>
     </div>
   )
