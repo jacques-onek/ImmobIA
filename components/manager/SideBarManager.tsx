@@ -31,7 +31,7 @@ const Sidebar = () => {
                         <Link href={route!} key={route}>
                             <div className={cn("link transition duration-200 ease-linear",
                                 isSelected && "shadow-sm bg-blue-600",)}>
-                            <div className=' size-6'>
+                            <div className=' '>
                                 <Icon className={`${isSelected ?'brightness-0 invert' : ''}  object-contain  `} />
                             </div>
                             <p className={cn("text-[13px] font-medium",isSelected ? "text-white" : "text-dark-500")}>{title}</p>
