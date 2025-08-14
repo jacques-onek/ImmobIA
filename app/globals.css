@@ -146,13 +146,13 @@
 }
 
 .sidebar{
-  @apply w-[16vw] flex flex-col justify-between pb-10 bg-white h-screen fixed shadow px-4
+  @apply w-[248px] flex flex-col justify-between pb-10 bg-white h-screen fixed shadow px-4
 }
 
 .link{
-  @apply flex  text-center  px-2 rounded pt-3 hover:bg-blue-600 hover:text-white
+  @apply flex  text-center gap-x-2 h-[40px] px-2 rounded py-2 hover:bg-blue-500 hover:text-white
 }
 
 .bg-primary-admin{
-    @apply bg-blue-700
+    @apply bg-blue-400
 }
