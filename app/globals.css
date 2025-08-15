@@ -142,7 +142,7 @@
 }
 
 .sidebarLayout{
-  @apply flex w-full justify-between gap-6 bg-sky-50 min-h-screen
+  @apply flex w-full justify-between gap-x-6 bg-sky-50 min-h-screen
 }
 
 .sidebar{
@@ -156,3 +156,4 @@
 .bg-primary-admin{
     @apply bg-blue-400
 }
+
