@@ -27,3 +27,85 @@ export const PROPERTY_TYPES = [
   { value: 'Duplex', label: 'Duplex' },
   { value: 'Penthouse', label: 'Penthouse' },
 ]
+
+
+export const PROPERTY_FORM_CONTENT = [
+     {
+      CardTitle:"Informations de base",
+      CardDescription:"Détails principaux de votre propriété",
+      CardFields:[
+         {
+          PropertyLabel:"Nom de la propriété",
+          PropertyName:"name",
+          PlaceHolder:"Villa moderne...",
+          Type:"text"
+         },
+         {
+          PropertyLabel:"Prix ($)",
+          PropertyName:"price",
+          PlaceHolder:"50000",
+          Type:"number"
+         },
+         {
+          PropertyLabel:"Type de propriété",
+          PropertyName:"type",
+          PlaceHolder:"Sélectionnez un type",
+          Type:"select"
+         },
+         {
+          PropertyLabel:"Surface (m²)",
+          PropertyName:"area",
+          PlaceHolder:"120",
+          Type:"number"
+         }
+      ]
+     },
+     {
+      CardTitle:"Détails de la propriété",
+      CardDescription:" Caractéristiques spécifiques",
+      CardFields:[
+         {
+          PropertyLabel:"Chambres",
+          PropertyName:"bedrooms",
+          PlaceHolder:"Villa moderne...",
+          Type:"number"
+         },
+         {
+          PropertyLabel:"Salles de bain",
+          PropertyName:"bathrooms",
+          PlaceHolder:"0",
+          Type:"number"
+         },
+         {
+          PropertyLabel:"Note (1-5)",
+          PropertyName:"rating",
+          PlaceHolder:"",
+          Type:"number"
+         },
+         {
+          PropertyLabel:"Surface (m²)",
+          PropertyName:"available",
+          PlaceHolder:"120",
+          Type:"checkbox"
+         }
+      ]
+     },
+     {
+      CardTitle:"Localisation",
+      CardDescription:"  Adresse et coordonnées géographiques",
+      CardFields:[
+         {
+          PropertyLabel:"Adresse complète",
+          PropertyName:"address",
+          PlaceHolder:"123 Avenue de la Paix, Kinshasa...",
+          Type:"texterea"
+         },
+         {
+          PropertyLabel:"longitude",
+          PropertyName:"longitude",
+          PlaceHolder:"0",
+          Type:"number"
+         },
+      ]
+     }
+]

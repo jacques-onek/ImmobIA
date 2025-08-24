@@ -19,17 +19,16 @@ export const PropertySchema = z.object({
     .min(3, "Le nom doit contenir au moins 3 caractères")
     .max(100, "Le nom est trop long"),
   
-  price: z.number()
+  price: z.coerce.number()
     .positive("Le prix doit être positif")
     .min(1, "Le prix est requis"),
   
-  bedrooms: z.number()
+  bedrooms: z.coerce.number()
     .int()
     .min(0, "Le nombre de chambres ne peut pas être négatif")
     .max(20, "Le nombre de chambres semble incorrect"),
   
-  bathrooms: z.number()
-    .int()
+  bathrooms:z.coerce.number()
     .min(0, "Le nombre de salles de bain ne peut pas être négatif")
     .max(10, "Le nombre de salles de bain semble incorrect"),
   
@@ -37,15 +36,15 @@ export const PropertySchema = z.object({
     .min(5, "L'adresse est requise")
     .max(500, "L'adresse est trop longue"),
   
-  latitude: z.number()
+  latitude: z.coerce.number()
     .min(-90, "Latitude invalide")
     .max(90, "Latitude invalide"),
   
-  longitude: z.number()
+  longitude:z.coerce.number()
     .min(-180, "Longitude invalide")
     .max(180, "Longitude invalide"),
   
-  rating: z.number()
+  rating: z.coerce.number()
     .min(1, "La note doit être entre 1 et 5")
     .max(5, "La note doit être entre 1 et 5"),
   
@@ -60,7 +59,7 @@ export const PropertySchema = z.object({
   
   features: z.array(z.string()),
   
-  area: z.number()
+  area: z.coerce.number()
     .positive("La surface doit être positive")
     .min(1, "La surface est requise"),
   
